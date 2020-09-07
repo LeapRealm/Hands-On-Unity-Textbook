@@ -9,11 +9,11 @@ public class RouletteController : MonoBehaviour
         // 클릭하면 회전 속도를 설정한다.
         if (Input.GetMouseButtonDown(0))
         {
-            this.rotSpeed = 30;
+            this.rotSpeed = 4320;
         }
 
         // 회전 속도만큼 룰렛을 회전시킨다.
-        transform.Rotate(0, 0, this.rotSpeed);
+        transform.Rotate(0, 0, this.rotSpeed * Time.deltaTime);
 
         // 룰렛을 감속시킨다.
         this.rotSpeed *= 0.99f;
